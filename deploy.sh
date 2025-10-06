@@ -24,6 +24,6 @@ git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # replace <USERNAME> with your GitHub username and <REPO> with your repository name
-git push -f git@github.com:<USERNAME>/sgHomewatch.git main:gh-pages
+git push -f git@github.com:phantomleak/sgHomewatch.git main:gh-pages
 
 cd -
