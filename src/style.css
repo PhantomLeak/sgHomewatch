@@ -34,8 +34,12 @@ a:hover {
 
 body {
   margin: 0;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -106,6 +110,7 @@ button:focus-visible {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .section {
@@ -114,6 +119,14 @@ button:focus-visible {
 
 #app {
   width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Force all elements to respect box-sizing */
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 /* Flexbox utility classes */
@@ -301,7 +314,11 @@ button:focus-visible {
 /* Responsive utilities */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
   }
   
   .hidden-mobile {
@@ -310,6 +327,93 @@ button:focus-visible {
   
   .nav-links {
     gap: 0.75rem;
+  }
+  
+  .section {
+    padding: 2rem 0;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  .service-card {
+    padding: 1.2rem;
+  }
+  
+  .contact-form form {
+    padding: 0.5rem;
+  }
+  
+  input, textarea, button {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin: 1.5rem auto 0;
+  }
+  
+  .about-photo {
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info, .contact-form {
+    padding: 0.5rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  body, html {
+    overflow-x: hidden;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+    max-width: 100%;
+    width: 100vw;
+  }
+  
+  .hero {
+    padding: 3rem 0;
+  }
+  
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  
+  .service-card i {
+    font-size: 1.7rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    margin-bottom: 0.3rem;
+  }
+  
+  .section {
+    padding: 1.5rem 0;
   }
 }
 
